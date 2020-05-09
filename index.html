@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion Hifi</title>
+
+	<!-- Load JQuery remote -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Load Boostrap CSS & JS remote -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+
+	<!-- Load Font google remote -->
+	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Load Surcharge CSS & JS local -->
+    <link rel="stylesheet" href="public/css/main.css" />
+    <script src="public/js/Misc.js"></script>
+    <script src="public/js/index.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h3 id="iddiv_Time" style="color: green;"></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h2 style="color: green;" id="openFS" >DashBoard</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+            <a href="/index.html"       class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >accessibility</i></a>
+        </div>
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+            <a href="/html/Decodeur.html"    class="col nextPreviousButton text-center"><i class="material-icons" style="color:orangered;" >widgets</i></a>
+            <a href="/html/Ampli.html"  class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >speaker</i></a>
+            <a href="/html/Tele.html"   class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >desktop_windows</i></a>
+            <a href="/html/Meteo.html"  class="col nextPreviousButton text-center"><i class="material-icons" style="color:darkblue;">cloud_queue</i></a>
+            <a href="/html/Volets.html" class="col nextPreviousButton text-center"><i class="material-icons" style="color:lightgray;" >home</i></a>
+        </div>
+
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+			<a class="col decoderButton text-center" id="idbtnAllSwitchOn">Allume Tout</a>
+        </div>
+
+        <div class="row decoderLine">
+			<a class="col decoderButton text-center" id="idbtnTeleSwitchOn"><i class="material-icons" ></i></a>
+			<a class="col decoderButton text-center" id="idbtnAmpliSwitchOnOff"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderSwitchOnOff"><i class="material-icons"></i></a>
+       </div>
+
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelHaut"><i class="material-icons">arrow_drop_up</i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelRetour"><i class="material-icons">arrow_back</i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelGauche"><i class="material-icons">arrow_left</i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelDroit"><i class="material-icons">arrow_right</i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelMenu"><i class="material-icons">menu</i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelBas"><i class="material-icons">arrow_drop_down</i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelOK"><i class="material-icons">check</i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliMasterVolumeLevelUp"><i class="material-icons">volume_up</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad1">1</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad2">2</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad3">3</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPlus"><i class="material-icons">add_to_queue</i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliMasterVolumeLevelDown"><i class="material-icons">volume_down</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad4">4</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad5">5</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad6">6</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelMoins"><i class="material-icons">remove_from_queue</i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliAudioMute"><i class="material-icons">volume_off</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad7">7</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad8">8</a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad9">9</a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPad0">0</a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+            <a class="col decoderButton text-center"><i class="material-icons"></i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelAvance"><i class="material-icons">fast_forward</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelRecord"><i class="material-icons">fiber_manual_record</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelRecule"><i class="material-icons">fast_rewind</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPlay"><i class="material-icons">play_arrow</i></a>
+            <a class="col decoderButton text-center" id="idbtnDecoderChannelPause"><i class="material-icons">pause</i></a>
+        </div>
+        <div class="row decoderLine">
+            <a class="col decoderButton text-center" id="iddiv_DecoderChannelTexte"><i></i></a>
+        </div>
+		<div class="row ampliLine">
+            <a class="col decoderButton text-center" id="iddiv_AmpliInputTexte"></a>
+		</div>
+		<div class="row ampliLine">
+            <a class="col decoderButton text-center" id="iddiv_AmpliVolumeTexte"></a>
+		</div>
+    </div>
+
+</body>
+
+</html>

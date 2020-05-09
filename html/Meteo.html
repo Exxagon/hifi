@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Meteo</title>
+
+	<!-- Load JQuery remote -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Load Boostrap CSS & JS remote -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+
+	<!-- Load Font google remote -->
+	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Load Surcharge CSS & JS local -->
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <script src="../public/js/Misc.js"></script>
+    <script src="../public/js/Meteo.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h3 id="iddiv_Time" style="color: green;"></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h2 style="color: green;" id="openFS">Météo</h2>
+            </div>
+        </div>
+    </div>
+
+	<div class="container-fluid">
+
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+            <a href="/index.html"       class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >accessibility</i></a>
+        </div>
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+            <a href="/html/Decodeur.html"    class="col nextPreviousButton text-center"><i class="material-icons" style="color:orangered;" >widgets</i></a>
+            <a href="/html/Ampli.html"  class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >speaker</i></a>
+            <a href="/html/Tele.html"   class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >desktop_windows</i></a>
+            <a href="/html/Meteo.html"  class="col nextPreviousButton text-center"><i class="material-icons" style="color:darkblue;">cloud_queue</i></a>
+            <a href="/html/Volets.html" class="col nextPreviousButton text-center"><i class="material-icons" style="color:lightgray;" >home</i></a>
+        </div>
+		
+		<!-- widget meteo -->
+		<div class="row justify-content-center" style="padding-top: 15%; cursor: none;   ">
+			
+			<div id="widget_067cc014697e87ac73d12033e79b2ed5">
+				<span id="l_067cc014697e87ac73d12033e79b2ed5"><a href="http://www.mymeteo.info/r/lyon_0b">Lyon
+						France</a></span>
+				<script type="text/javascript">
+					(function () {
+						var my = document.createElement("script");
+						my.type = "text/javascript";
+						my.async = true;
+						my.src =
+							"https://services.my-meteo.com/widget/js_design?ville=237&format=grand-rectangle&nb_jours=3&ombre1=000000&c1=393939&c2=000000&c3=393939&c4=393939&c5=393939&police=0&t_icones=12&fond=0&masque=3&x=300&y=250&d=0&id=067cc014697e87ac73d12033e79b2ed5";
+						var z = document.getElementsByTagName("script")[0];
+						z.parentNode.insertBefore(my, z);
+					})();
+				</script>
+			</div>
+		</div>
+
+		<!-- carte meteo -->
+		<div class="row justify-content-center" style="padding-top: 15%; cursor: none;   ">
+			<div id="carte_716771f6d69fcf5e4b089db68ef8b9d5">
+				<a href="http://www.mymeteo.info/r/france_Vy" title="www.my-meteo.com France">www.my-meteo.com France</a>
+				<script type="text/javascript">
+				(function() {
+					var my = document.createElement("script"); my.type = "text/javascript"; my.async = true;
+					my.src = "https://services.my-meteo.com/cartes/js?pays=france&periode=24&taille=mini&x=245&y=235&d=0&id=716771f6d69fcf5e4b089db68ef8b9d5";
+					var z = document.getElementsByTagName("script")[0]; z.parentNode.insertBefore(my, z);
+				})();
+				</script>
+				</div>
+				<
+		</div>
+
+	</div>
+
+</body>
+
+</html>

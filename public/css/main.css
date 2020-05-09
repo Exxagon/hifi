@@ -1,0 +1,73 @@
+html,
+body {
+	cursor: not-allowed;
+	font-family: 'Acme', sans-serif;
+	/* background-color: black; */
+	font-size: 140%;
+	background: rgb(32, 17, 75);
+}
+#main_nav {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+}
+#iddiv_Clock {
+	visibility: visible;
+	height: "auto";
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	margin-top: 16px;
+}
+
+#openFS {
+	cursor: pointer;
+}
+
+.decoderButton {
+	cursor: pointer;
+	margin: auto;
+	border-left: solid;
+	border-left-width: 1px;
+	/* border-color: black; */
+	border-color: rgb(32, 17, 75);
+}
+
+.nextPreviousButton {
+	cursor: pointer;
+	color: green;
+	border-left: solid;
+	border-left-width: 1px;
+	border-right: solid;
+	border-right-width: 1px;
+	/* border-color: black; */
+	border-color: rgb(32, 17, 75);
+}
+
+.ampliLine{
+	cursor: pointer;
+	line-height: 60px;
+	margin: auto;
+	color:white;
+	/* background: linear-gradient(to bottom, #021a24, #000407); */
+	background: linear-gradient(to bottom, rgb(67, 51, 112), rgb(32, 17, 75));
+}
+
+.decoderLine{
+	cursor: pointer;
+	line-height: 60px;
+	margin: auto;
+	color:white;
+	/* background: linear-gradient(to bottom, #021a24, #000407); */
+	background: linear-gradient(to bottom,  rgb(67, 51, 112), rgb(32, 17, 75));
+}
+
+.material-icons {
+	cursor: pointer;
+	margin: 0;
+	font-size: 110%;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}

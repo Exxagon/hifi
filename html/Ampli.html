@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gestion de l'ampli</title>
+
+	<!-- Load JQuery remote -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- Load Boostrap CSS & JS remote -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js">
+    </script>
+
+	<!-- Load Font google remote -->
+	<link href="https://fonts.googleapis.com/css?family=Acme&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Load Surcharge CSS & JS local -->
+    <link rel="stylesheet" href="../public/css/main.css" />
+    <script src="../public/js/Ampli.js"></script>
+    <script src="../public/js/Misc.js"></script>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h3 id="iddiv_Time" style="color: green;"></h3>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h2 style="color: green;" id="openFS">Ampli</h2>
+            </div>
+        </div>
+    </div>
+
+	<div class="container-fluid">
+
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+            <a href="/index.html"       class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >accessibility</i></a>
+        </div>
+        <div class="row decoderLine" style="margin-bottom: 10px; background: linear-gradient(to bottom, rgb(102, 78, 168),rgb(54, 29, 122));"  >
+            <a href="/html/Decodeur.html"    class="col nextPreviousButton text-center"><i class="material-icons" style="color:orangered;" >widgets</i></a>
+            <a href="/html/Ampli.html"  class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >speaker</i></a>
+            <a href="/html/Tele.html"   class="col nextPreviousButton text-center"><i class="material-icons" style="color:black;" >desktop_windows</i></a>
+            <a href="/html/Meteo.html"  class="col nextPreviousButton text-center"><i class="material-icons" style="color:darkblue;">cloud_queue</i></a>
+            <a href="/html/Volets.html" class="col nextPreviousButton text-center"><i class="material-icons" style="color:lightgray;" >home</i></a>
+        </div>
+		
+		<div class="row ampliLine">
+			<a class="col decoderButton text-center" id="idbtnAmpliSwitchOnOff"><i class="material-icons">power_settings_new</i></a>
+			<a class="col decoderButton text-center"><i class="material-icons"></i></a>
+			<a class="col decoderButton text-center"><i class="material-icons"></i></a>
+		</div>
+
+		<!-- Touches de selection -->
+		<div class="row ampliLine">
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorDVD">DVD</a>    
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorOrange">Box</a>
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorGame">Game</a>
+		</div>
+		<div class="row ampliLine">
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorKodi">Kodi</a>
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorPC">PC</a>
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorAux">Aux</a>
+		</div>
+		<div class="row ampliLine">
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorCD">CD</a>
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorTelevision">TV</a>
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorPhono">Phono</a>
+		</div>
+		<div class="row ampliLine">
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorRadio">Radio</a>   
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorNetWork">Net</a>
+			<a class="col decoderButton text-center" id="idbtnAmpliInputSelectorBlueTooth"><i class="material-icons">bluetooth</i></a>
+		</div>
+
+		<!-- Touches de direction -->
+        <div class="row ampliLine">
+            <a class="col decoderButton text-center" style="color: rgb(68, 78, 88);"><i class="material-icons">menu</i></a>    <!-- Non attribué -->
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenuUp"><i class="material-icons">arrow_drop_up</i></a>
+            <a class="col decoderButton text-center" style="color: rgb(68, 78, 88);"><i class="material-icons">info</i></a>    <!-- Non attribué -->
+        </div>
+        <div class="row ampliLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenuLeft"><i class="material-icons">arrow_left</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenuEnter"><i class="material-icons">check</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenuRight"><i class="material-icons">arrow_right</i></a>
+        </div>
+        <div class="row ampliLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenu"><i class="material-icons">settings</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenuDown"><i class="material-icons">arrow_drop_down</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliSetupMenuExit"><i class="material-icons">arrow_back</i></a>
+        </div>
+        <div class="row ampliLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliMasterVolumeLevelUp"><i class="material-icons">volume_up</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliAudioMute"><i class="material-icons">volume_off</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliMasterVolumeLevelDown"><i class="material-icons">volume_down</i></a>
+        </div>
+        <div class="row ampliLine">
+            <a class="col decoderButton text-center" id="idbtnAmpliInputMovie"><i class="material-icons">local_movies</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliInputMusic"><i class="material-icons">audiotrack</i></a>
+            <a class="col decoderButton text-center" id="idbtnAmpliInputGame"><i class="material-icons">sports_esports</i></a>
+        </div>
+		<div class="row ampliLine">
+            <a class="col decoderButton text-center" id="iddiv_AmpliInputSelector"></a>
+		</div>
+		<div class="row ampliLine">
+            <a class="col decoderButton text-center" id="iddiv_AmpliInputTexte"></a>
+		</div>
+		<div class="row ampliLine">
+            <a class="col decoderButton text-center" id="iddiv_AmpliVolumeTexte"></a>
+		</div>
+		<div class="row ampliLine">
+			<div class="col-2 decoderButton text-center" id="idbtnAmpliRadioDown"><i class="material-icons">fast_rewind</i></div>
+			<a class="col-8 decoderButton text-center" id="iddiv_AmpliRadioTexte"><i class="material-icons"></i></a>
+			<div class="col-2 decoderButton text-center" id="idbtnAmpliRadioUp"><i class="material-icons">fast_forward</i></div>
+		</div>
+	</div>
+</body>
+
+</html>
