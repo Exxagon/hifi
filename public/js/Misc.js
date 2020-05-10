@@ -250,11 +250,14 @@ function fctAmpliDisplayOnOff(  )
 	else
 	{
 		document.getElementById('idbtnAmpliSwitchOnOff').innerHTML = icon + '<i class=\"material-icons\" style=\"color:red;\">power_settings_new</i>';
-		document.getElementById('iddiv_AmpliInputTexte').innerHTML = '<i></i>';
 		document.getElementById('iddiv_AmpliVolumeTexte').innerHTML = '<i></i>';
-		document.getElementById('idbtnAmpliRadioUp').innerHTML = '<i></i>';
-		document.getElementById('idbtnAmpliRadioDown').innerHTML = '<i></i>';
-		document.getElementById('iddiv_AmpliRadioTexte').innerHTML = '<i></i>';
+		if( page != 'index.html' )
+		{
+			document.getElementById('iddiv_AmpliInputTexte').innerHTML = '<i></i>';
+			document.getElementById('idbtnAmpliRadioUp').innerHTML = '<i></i>';
+			document.getElementById('idbtnAmpliRadioDown').innerHTML = '<i></i>';
+			document.getElementById('iddiv_AmpliRadioTexte').innerHTML = '<i></i>';
+		}
 	}
 }
 
