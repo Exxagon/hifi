@@ -8,7 +8,8 @@ Functionnalities
 Other
 -----
 - [x] Add basic favicon
-- [ ] Add favicon for other devices
+- [x] Add favicon for other devices  --> Done from https://www.favicon-generator.org/, thanks !
+- [] Periodically refresh Power status
 
 Bugs to kill
 ============
