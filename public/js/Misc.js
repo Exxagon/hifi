@@ -238,10 +238,11 @@ function fctAmpliDisplayOnOff(  )
 {
 	var b_debugLocal=true;
 
-	var page = window.location.pathname.split("/").pop();
+	var page = window.location.href.split("/").pop();
+	page = ( page=='' )?'index.html':page;
 	var icon = ( page == 'index.html' )?'<i class=\"material-icons\">speaker</i>':'';
-	
-	if( b_debugLocal || b_debugGlobal ) console.log( 'fctAmpliDisplayOnOff\nb_ampliOn : ', b_ampliOn );
+
+	if( b_debugLocal || b_debugGlobal ) console.log( 'fctAmpliDisplayOnOff\nb_ampliOn : ', b_ampliOn, '\npage : ', page, '\nicon : ', icon );
 	if( b_ampliOn )
 	{
 
@@ -448,9 +449,10 @@ function fctDecoderDisplayOnOff( ) {
 	var b_debugLocal=true;
 
 	var page = window.location.pathname.split("/").pop();
+	page = ( page=='' )?'index.html':page;
 	var icon = ( page == 'index.html' )?'<i class=\"material-icons\">widgets</i>':'';
 	
-	if( b_debugLocal || b_debugGlobal ) console.log( "fctDecoderDisplayOnOff : ", b_decoderOn == true ? 'ON' : 'OFF' );
+	if( b_debugLocal || b_debugGlobal ) console.log( "fctDecoderDisplayOnOff : ", b_decoderOn == true ? 'ON' : 'OFF', '\npage : ', page, '\nicon : ', icon );
 	if( b_decoderOn )
 	{
 		document.getElementById('idbtnDecoderSwitchOnOff').innerHTML = icon + '<i class=\"material-icons\" style=\"color:green;\">power_settings_new</i>';
@@ -701,10 +703,12 @@ function fctTeleSwitchOn( )
 // Tele : Drive button text & color
 function fctTeleDisplayOnOff( ) {
 	var b_debugLocal=true;
+
 	var page = window.location.pathname.split("/").pop();
+	page = ( page=='' )?'index.html':page;
 	var icon = ( page == 'index.html' )?'<i class=\"material-icons\">desktop_windows</i>':'';
 
-	if( b_debugLocal || b_debugGlobal ) console.log( 'fctTeleDisplayOnOff : Start' );
+	if( b_debugLocal || b_debugGlobal ) console.log( 'fctTeleDisplayOnOff : Start', '\npage : ', page, '\nicon : ', icon );
 
 	$.ajax({
 		type: "POST",
